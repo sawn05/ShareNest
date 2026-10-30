@@ -1,0 +1,14 @@
+# --- .NET Ignore ---
+ShareNestAPI/bin/
+ShareNestAPI/obj/
+*.user
+*.suo
+*.userprefs
+
+# --- Android Ignore ---
+ShareNestApp/build/
+ShareNestApp/app/build/
+ShareNestApp/.gradle/
+ShareNestApp/local.properties
+ShareNestApp/.idea/
+*.iml
