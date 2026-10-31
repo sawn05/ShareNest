@@ -1,6 +1,6 @@
 # --- .NET Ignore ---
-ShareNestAPI/bin/
-ShareNestAPI/obj/
+ShareNestAPI/**/bin/
+ShareNestAPI/**/obj/
 *.user
 *.suo
 *.userprefs
