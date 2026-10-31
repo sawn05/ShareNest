@@ -1,4 +1,5 @@
 # --- .NET Ignore ---
+**/.vs/
 ShareNestAPI/**/bin/
 ShareNestAPI/**/obj/
 *.user
