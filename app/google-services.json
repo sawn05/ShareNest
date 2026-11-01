@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1024002188608",
+    "project_id": "sharecare-31ddb",
+    "storage_bucket": "sharecare-31ddb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1024002188608:android:58aa73a8ba12612d6dc6a5",
+        "android_client_info": {
+          "package_name": "com.example.sharecare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmXJ3Ipqw1Nfftyl5m9gGbfm6mJJSWhdw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
