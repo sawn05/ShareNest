@@ -1,9 +1,13 @@
-﻿using System.Text.Json;
+﻿using ShareNest.Api.Middleware;
+using ShareNest.Api.Models.DTOs.Common;
+using System.Text.Json;
 
 namespace ShareNest.Api.Middleware;
 
 public class GlobalExceptionMiddleware
 {
+    private static readonly JsonSerializerOptions JsonOptions = new(JsonSerializerDefaults.Web);
+
     private readonly RequestDelegate _next;
     private readonly ILogger<GlobalExceptionMiddleware> _logger;
 
@@ -35,6 +39,7 @@ public class GlobalExceptionMiddleware
     {
         context.Response.StatusCode = status;
         context.Response.ContentType = "application/json";
-        return context.Response.WriteAsync(JsonSerializer.Serialize(new { status, message }));
+        var body = new ApiErrorResponse { Status = status, Message = message };
+        return context.Response.WriteAsync(JsonSerializer.Serialize(body, JsonOptions));
     }
 }
