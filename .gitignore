@@ -7,9 +7,8 @@ ShareNestAPI/**/obj/
 *.userprefs
 
 # --- Android Ignore ---
-ShareNestApp/build/
-ShareNestApp/app/build/
-ShareNestApp/.gradle/
-ShareNestApp/local.properties
-ShareNestApp/.idea/
+**/build/
+**/.gradle/
+**/.idea/
+**/local.properties
 *.iml
