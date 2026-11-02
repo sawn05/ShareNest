@@ -53,27 +53,27 @@ public class AuthService : IAuthService
         return BuildResponse(user);
     }
 
-    public async Task<UserDto> GetCurrentUserAsync(int userId)
-    {
-        var user = await _users.GetByIdAsync(userId)
-            ?? throw new AppException("Không tìm thấy người dùng.", StatusCodes.Status404NotFound);
-        return ToDto(user);
-    }
+    //public async Task<UserDto> GetCurrentUserAsync(int userId)
+    //{
+    //    var user = await _users.GetByIdAsync(userId)
+    //        ?? throw new AppException("Không tìm thấy người dùng.", StatusCodes.Status404NotFound);
+    //    return ToDto(user);
+    //}
 
     private AuthResponseDto BuildResponse(User user)
     {
         var (token, expiresAt) = _jwt.Generate(user);
-        return new AuthResponseDto { Token = token, ExpiresAt = expiresAt, User = ToDto(user) };
+        return new AuthResponseDto { Token = token, ExpiresAt = expiresAt, User = UserMapper.ToDto(user) };
     }
 
-    private static UserDto ToDto(User u) => new()
-    {
-        UserId = u.UserId,
-        FullName = u.FullName,
-        Email = u.Email,
-        PhoneNumber = u.PhoneNumber,
-        Address = u.Address,
-        AvatarUrl = u.AvatarUrl,
-        Role = u.Role.ToString()
-    };
+    //private static UserDto ToDto(User u) => new()
+    //{
+    //    UserId = u.UserId,
+    //    FullName = u.FullName,
+    //    Email = u.Email,
+    //    PhoneNumber = u.PhoneNumber,
+    //    Address = u.Address,
+    //    AvatarUrl = u.AvatarUrl,
+    //    Role = u.Role.ToString()
+    //};
 }
