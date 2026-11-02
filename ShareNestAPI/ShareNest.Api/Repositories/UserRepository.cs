@@ -24,4 +24,8 @@ public class UserRepository : IUserRepository
         _db.Users.Add(user);
         await _db.SaveChangesAsync();
     }
+    public Task<bool> PhoneExistsAsync(string phone, int excludeUserId) =>
+    _db.Users.AnyAsync(u => u.PhoneNumber == phone && u.UserId != excludeUserId);
+
+    public Task UpdateAsync(User user) => _db.SaveChangesAsync();
 }

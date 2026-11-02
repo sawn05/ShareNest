@@ -11,6 +11,8 @@ using ShareNest.Api.Repositories.Interfaces;
 using ShareNest.Api.Services;
 using ShareNest.Api.Services.Interfaces;
 using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using ShareNest.Api.Models.DTOs.Common;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +40,28 @@ builder.Services
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.Key)),
             ClockSkew = TimeSpan.FromMinutes(1)
         };
+        options.Events = new JwtBearerEvents
+        {
+            OnChallenge = async context =>
+            {
+                context.HandleResponse(); // chặn body rỗng mặc định
+                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                await context.Response.WriteAsJsonAsync(new ApiErrorResponse
+                {
+                    Status = 401,
+                    Message = "Chưa đăng nhập hoặc phiên đăng nhập đã hết hạn."
+                });
+            },
+            OnForbidden = async context =>
+            {
+                context.Response.StatusCode = StatusCodes.Status403Forbidden;
+                await context.Response.WriteAsJsonAsync(new ApiErrorResponse
+                {
+                    Status = 403,
+                    Message = "Bạn không có quyền thực hiện thao tác này."
+                });
+            }
+        };
     });
 builder.Services.AddAuthorization();
 
@@ -45,8 +69,11 @@ builder.Services.AddAuthorization();
 builder.Services.AddScoped<IJwtHelper, JwtHelper>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
-builder.Services.AddControllers();
+//builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .ConfigureApiBehaviorOptions(ApiBehaviorConfig.Configure);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {

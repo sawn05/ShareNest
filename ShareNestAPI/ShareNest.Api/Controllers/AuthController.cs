@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ShareNest.Api.Models.DTOs.Auth;
 using ShareNest.Api.Services.Interfaces;
-using System.Security.Claims;
+//using System.Security.Claims;
 
 namespace ShareNest.Api.Controllers;
 
@@ -26,13 +26,13 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Login(LoginRequestDto dto) =>
         Ok(await _auth.LoginAsync(dto));
 
-    [Authorize]
-    [HttpGet("me")]
-    public async Task<IActionResult> Me()
-    {
-        var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-        return Ok(await _auth.GetCurrentUserAsync(userId));
-    }
+    //[Authorize]
+    //[HttpGet("me")]
+    //public async Task<IActionResult> Me()
+    //{
+    //    var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+    //    return Ok(await _auth.GetCurrentUserAsync(userId));
+    //}
 
     // Endpoint tạm để kiểm tra phân quyền
     [Authorize(Roles = "Admin")]
