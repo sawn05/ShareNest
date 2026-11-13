@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:background="#21845A"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/back"
+            android:tint="#FFFFFF"
+            android:contentDescription="Quay lại" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Chọn vị trí"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+    <!-- Ô tìm kiếm địa chỉ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_margin="16dp"
+        android:paddingHorizontal="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_location_search">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/search_icon"
+            android:contentDescription="Tìm kiếm"
+            android:tint="#777777" />
+
+        <EditText
+            android:id="@+id/edtSearchLocation"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:hint="Tìm khu vực, địa chỉ..."
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:inputType="textPostalAddress" />
+
+    </LinearLayout>
+
+    <!-- Sử dụng vị trí hiện tại -->
+    <LinearLayout
+        android:id="@+id/btnCurrentLocation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingHorizontal="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/placeholder"
+            android:contentDescription="GPS"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Sử dụng vị trí hiện tại"
+            android:textStyle="bold"
+            android:textColor="#287D32"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <org.maplibre.android.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/imgMapPin"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:src="@drawable/placeholder"
+            android:contentDescription="Vị trí đã chọn" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txtSelectedAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang xác định vị trí..."
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:paddingBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phạm vi tìm kiếm"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtRadius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5 km"
+            android:textColor="#287D32"
+            android:gravity="end" />
+
+        <SeekBar
+            android:id="@+id/seekRadius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="29"
+            android:progress="4" />
+
+        <Button
+            android:id="@+id/btnConfirmLocation"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Xác nhận vị trí"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#21845A" />
+
+    </LinearLayout>
+</LinearLayout>

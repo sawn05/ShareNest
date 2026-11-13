@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:padding="12dp"
+    android:orientation="vertical"
+    android:background="@drawable/posts_card_bg">
+
+    <!-- THÔNG TIN VẬT PHẨM -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- ẢNH VẬT PHẨM -->
+        <ImageView
+            android:id="@+id/postImage"
+            android:layout_width="92dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/posts_image_placeholder"
+            android:src="@drawable/posts_image_placeholder"
+            android:contentDescription="Ảnh vật phẩm" />
+
+        <!-- TÊN, TRẠNG THÁI, NGÀY ĐĂNG -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/postName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bàn học gỗ"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#25352D"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/postStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="● Còn khả dụng"
+                android:textSize="12sp"
+                android:textColor="#177D53" />
+
+            <TextView
+                android:id="@+id/postDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Đăng ngày 08/11/2026 lúc 01:27"
+                android:textSize="11sp"
+                android:textColor="#7B8983"
+                android:maxLines="2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- GHI CHÚ TRẠNG THÁI -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/posts_info"
+            android:scaleType="fitCenter"
+            android:contentDescription="Thông tin trạng thái" />
+
+        <TextView
+            android:id="@+id/postNote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="Vật phẩm đang chờ người nhận"
+            android:textColor="#718079"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!-- NÚT CHỈNH SỬA VÀ XÓA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <!-- CHỈNH SỬA -->
+        <LinearLayout
+            android:id="@+id/btnEditPost"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:background="@drawable/posts_edit_bg"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/posts_edit"
+                android:scaleType="fitCenter"
+                android:contentDescription="Chỉnh sửa" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Chỉnh sửa"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#157A4E"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <!-- XÓA -->
+        <LinearLayout
+            android:id="@+id/btnDeletePost"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:background="@drawable/posts_delete_bg"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/posts_trash"
+                android:scaleType="fitCenter"
+                android:contentDescription="Xóa" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Xóa"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#C43C3C"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

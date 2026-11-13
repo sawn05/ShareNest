@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F8F6">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:background="#247B53">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back"
+            android:tint="#ffffff"
+            android:contentDescription="Quay lại" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Bài đăng của tôi"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:includeFontPadding="false" />
+
+    </LinearLayout>
+
+    <!-- TABS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:padding="8dp"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/posts_tabs_bg">
+
+            <!-- CÒN KHẢ DỤNG -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tabAvailable"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Còn khả dụng"
+                    android:textSize="12sp"
+                    android:textColor="#167950"
+                    android:includeFontPadding="false"
+                    android:singleLine="true" />
+
+                <View
+                    android:id="@+id/indicatorAvailable"
+                    android:layout_width="40dp"
+                    android:layout_height="3dp"
+                    android:background="@drawable/posts_indicator" />
+
+            </LinearLayout>
+
+            <!-- ĐÃ CÓ NGƯỜI NHẬN -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tabReserved"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Đã có người nhận"
+                    android:textSize="11sp"
+                    android:textColor="#7A8982"
+                    android:includeFontPadding="false"
+                    android:maxLines="2" />
+
+                <View
+                    android:id="@+id/indicatorReserved"
+                    android:layout_width="40dp"
+                    android:layout_height="3dp"
+                    android:background="@drawable/posts_indicator"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <!-- ĐÃ HOÀN TẤT -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tabCompleted"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Đã hoàn tất"
+                    android:textSize="12sp"
+                    android:textColor="#7A8982"
+                    android:includeFontPadding="false"
+                    android:singleLine="true" />
+
+                <View
+                    android:id="@+id/indicatorCompleted"
+                    android:layout_width="40dp"
+                    android:layout_height="3dp"
+                    android:background="@drawable/posts_indicator"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- THÔNG TIN SỐ BÀI ĐĂNG -->
+    <TextView
+        android:id="@+id/txtSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="10dp"
+        android:text="Đang tải bài đăng..."
+        android:textSize="12sp"
+        android:textColor="#7A8982" />
+
+    <!-- DANH SÁCH BÀI ĐĂNG -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMyPosts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false" />
+
+        <TextView
+            android:id="@+id/txtEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="Chưa có bài đăng trong mục này"
+            android:textSize="14sp"
+            android:textColor="#7A8982"
+            android:visibility="gone" />
+
+    </FrameLayout>
+</LinearLayout>

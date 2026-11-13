@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="page_bg">#F7FAF8</color>
+    <color name="green">#21845A</color>
+    <color name="green_dark">#155D42</color>
+    <color name="ink">#23342B</color>
+    <color name="muted">#7C8A82</color>
+    <color name="light_green">#E8F5EC</color>
 </resources>
