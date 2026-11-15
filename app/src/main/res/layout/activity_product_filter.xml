@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/surface"
+        android:elevation="1dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/filter_title"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/filter_category_title"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:chipSpacingHorizontal="8dp"
+                app:chipSpacingVertical="4dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipCategoryAll"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:checked="true"
+                    android:text="@string/category_all" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipCategoryClothes"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:text="@string/category_clothes" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipCategoryHousehold"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:text="@string/category_household" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipCategoryBooks"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:text="@string/category_books" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipCategoryFurniture"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:text="@string/category_furniture" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/status_label"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:chipSpacingHorizontal="8dp"
+                app:chipSpacingVertical="4dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipStatusAll"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:checked="true"
+                    android:text="@string/category_all" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipStatusAvailable"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:text="@string/product_available" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipStatusReserved"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:text="@string/status_reserved" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipStatusCompleted"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:text="@string/status_completed" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/filter_distance_title"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:chipSpacingHorizontal="8dp"
+                app:chipSpacingVertical="4dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDistanceAny"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:checked="true"
+                    android:text="@string/distance_any" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDistance1"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:text="@string/distance_under_1" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDistance3"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:text="@string/distance_under_3" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDistance5"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:text="@string/distance_under_5" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDistance10"
+                    style="@style/Widget.ShareCare.FilterChip"
+                    android:text="@string/distance_under_10" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/swSortDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:checked="false"
+                android:fontFamily="sans-serif-medium"
+                android:paddingVertical="4dp"
+                android:text="@string/sort_by_distance"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_bar"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="16dp">
+
+        <Button
+            android:id="@+id/btnReset"
+            style="@style/Widget.ShareCare.OutlinedGreenButton"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="@string/reset_filters" />
+
+        <Button
+            android:id="@+id/btnApply"
+            style="@style/Widget.ShareCare.PrimaryButton"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:text="@string/apply_filters" />
+    </LinearLayout>
+</LinearLayout>

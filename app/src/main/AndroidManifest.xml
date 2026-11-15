@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
+        android:name=".ShareCareApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,20 +15,80 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShareCare">
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".activities.MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
 
-        </activity>
         <activity
-            android:name=".RegisterActivity"
-            android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:name=".activities.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ShareCare.Screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ShareCare.Screen" />
+
+        <activity
+            android:name=".activities.ProductListActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ShareCare.Screen" />
+
+        <activity
+            android:name=".activities.ProductDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ShareCare.Screen" />
+
+        <activity
+            android:name=".activities.ProductFilterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ShareCare.Screen" />
+
+        <activity
+            android:name=".activities.SendRequestActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ShareCare.Screen" />
+
+        <activity
+            android:name=".activities.RequestSentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ShareCare.Screen" />
+
+        <activity
+            android:name=".activities.ReceivedRequestsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ShareCare.Screen" />
+
+        <activity
+            android:name=".activities.MyRequestsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ShareCare.Screen" />
+
+        <activity
+            android:name=".activities.NotificationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ShareCare.Screen" />
+
+        <activity
+            android:name=".activities.NotificationDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ShareCare.Screen" />
+
+        <activity
+            android:name=".activities.RequestDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ShareCare.Screen" />
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ShareCare.Screen" />
     </application>
 
 </manifest>

@@ -1,3 +1,121 @@
 <resources>
     <string name="app_name">ShareCare</string>
+
+    <string name="back">Quay lại</string>
+
+    <string name="send_request_title">Gửi yêu cầu nhận</string>
+    <string name="send_request_action">Gửi yêu cầu nhận</string>
+    <string name="requested_action">Đã yêu cầu nhận</string>
+    <string name="product_image">Ảnh nhu yếu phẩm</string>
+    <string name="product_name_sample">Áo khoác mùa đông</string>
+    <string name="product_available">Còn khả dụng</string>
+    <string name="address_sample">Quận Cầu Giấy, Hà Nội</string>
+    <string name="request_owner">Người đăng bài</string>
+    <string name="request_owner_hint">Thông tin người chia sẻ nhu yếu phẩm</string>
+    <string name="request_message_label">Lời nhắn (tùy chọn)</string>
+    <string name="request_message_hint">Nhập lời nhắn của bạn...</string>
+    <string name="request_notice">Bạn sẽ nhận được thông báo khi chủ bài đăng phản hồi.</string>
+    <string name="request_message_sample">Mình rất cần cho em nhỏ mùa đông này. Mong bạn chia sẻ. Cảm ơn bạn!</string>
+    <string name="requester_sample">Nguyễn Thị Mai</string>
+    <string name="requester_label">Người gửi yêu cầu</string>
+    <string name="message_label">Lời nhắn</string>
+
+    <string name="status_pending">Đang chờ</string>
+    <string name="status_accepted">Đã chấp nhận</string>
+    <string name="status_rejected">Đã từ chối</string>
+    <string name="accept">Chấp nhận</string>
+    <string name="reject">Từ chối</string>
+
+    <string name="received_requests_title">Yêu cầu nhận vật phẩm</string>
+    <string name="my_requests_title">Yêu cầu của tôi</string>
+    <string name="request_detail_title">Chi tiết yêu cầu</string>
+    <string name="empty_received_requests">Chưa có yêu cầu nào</string>
+    <string name="empty_received_requests_hint">Yêu cầu nhận nhu yếu phẩm sẽ xuất hiện ở đây.</string>
+    <string name="empty_my_requests">Bạn chưa gửi yêu cầu nào</string>
+    <string name="empty_my_requests_hint">Các yêu cầu bạn gửi sẽ được theo dõi tại đây.</string>
+
+    <string name="notifications_title">Thông báo</string>
+    <string name="notification_detail_title">Chi tiết thông báo</string>
+    <string name="notification_title_sample">Yêu cầu nhận nhu yếu phẩm mới</string>
+    <string name="notification_content_sample">Nguyễn Thị Mai đã gửi yêu cầu nhận nhu yếu phẩm của bạn.</string>
+    <string name="empty_notifications">Bạn chưa có thông báo nào</string>
+    <string name="empty_notifications_hint">Cập nhật về yêu cầu và hoạt động của bạn sẽ xuất hiện ở đây.</string>
+    <string name="view_request">Xem yêu cầu</string>
+    <string name="view_product">Xem bài đăng</string>
+    <string name="time_just_now">Vừa xong</string>
+
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_requests">Yêu cầu</string>
+    <string name="nav_notifications">Thông báo</string>
+    <string name="nav_profile">Cá nhân</string>
+    <string name="nav_post">Đăng bài</string>
+
+    <string name="search_products_hint">Tìm nhu yếu phẩm...</string>
+    <string name="filter">Bộ lọc</string>
+    <string name="category_all">Tất cả</string>
+    <string name="category_clothes">Quần áo</string>
+    <string name="category_household">Đồ gia dụng</string>
+    <string name="category_books">Sách</string>
+    <string name="category_furniture">Nội thất</string>
+    <string name="demo_data_notice">Đang hiển thị dữ liệu mẫu để xem trước giao diện.</string>
+    <string name="empty_products">Không tìm thấy nhu yếu phẩm</string>
+    <string name="empty_products_hint">Thử từ khóa khác hoặc thay đổi bộ lọc.</string>
+
+    <string name="product_meta_sample">Quần áo • Quận Cầu Giấy, Hà Nội</string>
+    <string name="product_description_sample">Áo khoác còn tốt, phù hợp cho mùa đông.</string>
+    <string name="owner_sample">Nguyễn Văn A</string>
+    <string name="owner_fallback">Người dùng ẩn danh</string>
+    <string name="distance_sample">Cách bạn 1,2 km</string>
+    <string name="distance_km_format">Cách bạn %.1f km</string>
+
+    <string name="product_detail_title">Chi tiết vật phẩm</string>
+    <string name="description_label">Mô tả</string>
+    <string name="category_label">Danh mục</string>
+    <string name="status_label">Trạng thái</string>
+    <string name="product_not_found">Không tìm thấy vật phẩm</string>
+    <string name="product_not_available_action">Vật phẩm không còn khả dụng</string>
+    <string name="product_unavailable_notice">Vật phẩm đã được giữ chỗ hoặc hoàn tất nên hiện không thể gửi yêu cầu nhận.</string>
+
+    <string name="status_reserved">Đã giữ chỗ</string>
+    <string name="status_completed">Đã hoàn tất</string>
+
+    <string name="filter_title">Bộ lọc nâng cao</string>
+    <string name="filter_category_title">Danh mục</string>
+    <string name="filter_distance_title">Khoảng cách</string>
+    <string name="distance_any">Không giới hạn</string>
+    <string name="distance_under_1">Dưới 1 km</string>
+    <string name="distance_under_3">Dưới 3 km</string>
+    <string name="distance_under_5">Dưới 5 km</string>
+    <string name="distance_under_10">Dưới 10 km</string>
+    <string name="sort_by_distance">Ưu tiên nơi gần nhất</string>
+    <string name="reset_filters">Đặt lại</string>
+    <string name="apply_filters">Áp dụng</string>
+
+    <string name="no_message">Không có lời nhắn</string>
+    <string name="requester_prefix">Người gửi: %1$s</string>
+    <string name="owner_prefix">Người đăng: %1$s</string>
+    <string name="request_sent_title">Đã gửi yêu cầu</string>
+    <string name="request_sent_message">Yêu cầu nhận %1$s của bạn đã được gửi tới chủ bài đăng.</string>
+    <string name="request_sent_hint">Bạn sẽ nhận được thông báo khi chủ bài đăng phản hồi.</string>
+    <string name="view_my_requests">Xem yêu cầu của tôi</string>
+    <string name="continue_browsing">Tiếp tục xem nhu yếu phẩm</string>
+
+    <string name="settings_title">Cài đặt giao diện</string>
+    <string name="settings_brightness">Độ sáng màn hình</string>
+    <string name="settings_theme">Chế độ hiển thị</string>
+    <string name="settings_theme_light">Sáng</string>
+    <string name="settings_theme_dark">Tối</string>
+    <string name="settings_theme_auto">Tự động</string>
+    <string name="settings_account">Thông tin tài khoản</string>
+    <string name="settings_shake_refresh">Lắc điện thoại để làm mới</string>
+    <string name="settings_logout">Đăng xuất</string>
+
+    <string name="cannot_send_to_self">Bạn không thể gửi yêu cầu cho bài đăng của mình</string>
+
+    <string name="welcome_back">Chào mừng trở lại</string>
+    <string name="welcome_subtitle">Đăng nhập để tiếp tục</string>
+    <string name="forgot_password">Quên mật khẩu?</string>
+    <string name="login_button">Đăng nhập</string>
+    <string name="dont_have_account">Chưa có tài khoản?</string>
+    <string name="sign_up">Đăng ký</string>
 </resources>
